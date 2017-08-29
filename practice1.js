@@ -73,7 +73,7 @@ function checkTime(data) {
 $(document).ready(function() {
 	$.ajax({
 		type: 'GET',
-	    url: "http://magicseaweed.com/api/1d110434ae41701c54d0adec36cf5bb9/forecast/?spot_id=1281&units=us&fields=localTimestamp,wind.speed,wind.compassDirection,condition.temperature,swell.components.primary.height&callback=checkTime",
+	    url: "https://magicseaweed.com/api/1d110434ae41701c54d0adec36cf5bb9/forecast/?spot_id=1281&units=us&fields=localTimestamp,wind.speed,wind.compassDirection,condition.temperature,swell.components.primary.height&callback=checkTime",
 	 
 	    // The name of the callback parameter
 	    jsonp: "xyz",
