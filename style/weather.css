@@ -1,0 +1,60 @@
+/* Weather Conditions */
+
+#weather {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+	font-size: 0.75rem;
+  	margin: 0 auto;
+  	background: rgba(0, 0, 0, 0.90);
+  	color: white;
+  	overflow: hidden;
+  	z-index: 1 !important;
+}
+
+#weather div {
+	display: inline-block;
+	padding-top: 5px;
+}
+
+#weather h2 {
+	display: block;
+	margin-top: 10px;
+	font-size: 1.6rem;
+}
+
+#weather-conditions {
+	width: 80%;
+}
+
+#weather-conditions table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#weather-conditions table th {
+	color: white;
+	margin: 0;
+	font-size: 1rem;
+	padding: 0;
+	padding-bottom: 5px;
+}
+
+#weather-conditions table td {
+	font-size: 0.75rem;
+	color: white;
+}
+
+#weather #x-box {
+	float: right;
+	border: 1px solid white;
+	padding: 2px 7px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+#x-box:hover {
+	background-color: white;
+	color: black;
+}
