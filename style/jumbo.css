@@ -1,0 +1,46 @@
+/* Section Jumbo */
+
+#jumbo {
+	min-height: 300px;
+	text-align: center;
+	color: white;
+	margin-top: 0 !important;
+}
+
+#jumbo h1 {
+	font-size: 6rem;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+#jumbo h4 {
+	font-size: 1.5rem;
+	margin-bottom: 30px;
+}
+
+#jumbo h1, h4 {
+	font-family: Raleway, sans-serif;
+}
+
+#jumbo a {
+	text-decoration: none;
+	color: white;
+}
+
+#jumbo .button {
+	background: #FBA100;
+	padding: 10px 30px;
+	border-radius: 10px;
+}
+
+#jumbo .button:hover {
+	background: white;
+	color: rgba(255, 0, 0, 0.5);
+}
+
+#jumbo #splash {
+	background: rgba(107,186,167, 0.8);
+	margin-top: 50px;
+	padding-bottom: 20px;
+	width: 100%;
+}
