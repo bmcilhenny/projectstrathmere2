@@ -1,0 +1,132 @@
+/* Media Queries */
+
+@media only screen and (max-width: 970px) {
+	#newsletter {
+		text-align: center;
+		margin: auto;
+	}
+
+	#newsletter h1 {
+		float: none;
+	}
+
+	#newsletter form {
+		float: none;
+	}
+}
+
+@media only screen and (max-width: 790px) {
+
+	/*Header section responsive */
+	header {
+		text-align: center;
+		margin: auto;
+	}
+
+	header .logo {
+		float: none;
+	}
+
+	header h1 {
+		float: none;
+		display: block;
+	}
+
+	header nav {
+		float: none;
+		display: block;
+	}
+
+	/*Jumbo section */
+
+	#jumbo {
+		min-height: 200px;
+	}
+
+	#jumbo h1 {
+		font-size: 4.5rem;
+	}
+
+	#jumbo h4 {
+		font-size: 1.0rem;
+	}
+
+	/*Main section  */
+	#main #main-col {
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	#main #sidebar {
+		float: none;
+		width: 100%;
+	}
+	#main p {
+		font-size: 0.75rem;
+	}
+
+	/*Weather section */
+	#weather h2 {
+		font-size: 1.25rem;
+	}
+
+	#weather #weather-conditions {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	#weather #weather-conditions th {
+		font-size: 0.85rem;
+		padding: 0;
+
+	}
+
+	#weather #weather-conditions td {
+		font-size: 0.5rem;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+
+	header a {
+		font-size: 1rem;
+	}
+
+	header li {
+		padding: 0 0.5rem;
+	}
+
+	#jumbo h1 {
+		font-size: 3.5rem;
+	}
+
+	#newsletter h1 {
+		margin-bottom: 10px;
+	}
+
+	#newsletter h1, #newsletter form {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	#newsletter form input[type="email"] {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	#newsletter button {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 0;
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 406px) {
+	header a {
+		font-size: 0.75rem;
+	}
+}
