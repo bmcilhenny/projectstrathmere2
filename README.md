@@ -1,4 +1,4 @@
-# projectstrathmere2
+# yo
 
 This is the first responsive website I am proud of making. It is devoted to my local shoretown where I grew up surfing and I hope it can be adopted by the population of Strathmere (138 people) in an effort to preserve the town's history. Through pictures, videos, and a message board, I hope Project Strathmere can provide the residents and visitors of Strathmere a platform to share their Strathmere-specific stories and memories in one concentrated place.
 
