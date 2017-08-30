@@ -1,0 +1,52 @@
+/* Section Media */
+
+#media {
+	margin-bottom: 20px;
+}
+#media #slideshow {
+	height: 400px;
+	background: url('old-strathmere.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#media .numbertext {
+  color: #f2f2f2;
+  font-size: 1.25rem;
+  padding: 8px 12px;
+  position: relative;
+  top: 0;
+}
+
+#media #dot-container {
+	text-align: center;
+}
+
+#media .dot {
+	margin: 10px 5px 0px 5px;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background-color: #adadad;
+}
+
+#media .active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}

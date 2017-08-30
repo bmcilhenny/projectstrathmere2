@@ -1,0 +1,25 @@
+/* Section Newsletter */
+
+#newsletter {
+	min-height: 75px;
+	padding: 30px 30px 0 30px;
+}
+
+#newsletter .container {
+	width: 75%;
+}
+
+#newsletter h1 {
+	float: left;
+	color: white;
+}
+
+#newsletter form {
+	float: right;
+}
+
+#newsletter input[type="email"] {
+	padding: 4px;
+	height: 25px;
+	width: 250px;
+}
