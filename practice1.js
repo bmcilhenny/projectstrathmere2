@@ -16,24 +16,22 @@ contactLink.addEventListener('click', contactFocus, false);
 //the dot notation to pick  particular key to return value at that key:
 //Need to write a function to make sure time being compared to most recent magicseaweed time is always on Strathmere, NJ local time
 
-//
 // Normalize for Strathmere time
-//
 function calcStrathmereTime(offset) {
     // create Date object for current location
-    var d = new Date();
+    var currentTime = new Date();
 
     // convert to msec
     // subtract local time zone offset
     // get UTC time in msec
-    var utc = d.getTime() - (d.getTimezoneOffset() * 60000);
+    var utc = currentTime.getTime() - (currentTime.getTimezoneOffset() * 60000);
 
     // create new Date object for different city
     // using supplied offset
-    var nd = new Date(utc + (3600000*offset));
-	nd = parseInt((nd.getTime() / 1000).toFixed(0));
+    var newTimeZoneDate = new Date(utc + (3600000*offset));
+	newTimeZoneDate = parseInt((newTimeZoneDate.getTime() / 1000).toFixed(0));
     // return timestamp as a string
-    return nd;
+    return newTimeZoneDate;
 }
 
 
@@ -42,7 +40,7 @@ function checkTime(data) {
 	var curr = data[0];
 	console.log(curr.localTimestamp)
 	var strathmereTime = calcStrathmereTime('4.0');
-    var diff = Math.abs (strathmereTime - curr.localTimestamp);
+    	var diff = Math.abs (strathmereTime - curr.localTimestamp);
 
 
 	for (var i = 0; i < data.length; i++) {
@@ -52,11 +50,9 @@ function checkTime(data) {
             curr = data[i];
         }
     }
-    console.log(curr.localTimestamp)
+    
     var theDate = new Date(curr.localTimestamp * 1000);
-	console.log(theDate)
-   	console.log(data)
-
+	
    	$weather.append('<table><th>Last updated as of: </th><th>Wind direction</th><th>Wind speed</th><th>Air temperature</th><th>Swell height</th><tr><td>' + theDate +'</td><td>' + curr.wind.compassDirection + '</td><td>' + curr.wind.speed + ' mph </td><td>' + curr.condition.temperature + ' &#8457</td><td>' + curr.swell.components.primary.height + ' ft</td></tr></table>');
 }
 
@@ -93,9 +89,7 @@ $('#x-box').on('click', function() {
 	});
 });
 
-//
 //Slideshow
-//
 var slideIndex = 1
 showSlides();
 
@@ -120,9 +114,7 @@ function showSlides() {
     setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
 
-//
 // Email Signup Popup
-//
 $("#emailForm").submit(function(){
  alert("Thanks for signing up!");
 });
