@@ -38,7 +38,6 @@ function calcStrathmereTime(offset) {
 function checkTime(data) {
 	var $weather = $('#weather-conditions');
 	var curr = data[0];
-	console.log(curr.localTimestamp)
 	var strathmereTime = calcStrathmereTime('4.0');
     	var diff = Math.abs (strathmereTime - curr.localTimestamp);
 
@@ -52,14 +51,23 @@ function checkTime(data) {
     }
     
     var theDate = new Date(curr.localTimestamp * 1000);
-	
-   	$weather.append('<table><th>Last updated as of: </th><th>Wind direction</th><th>Wind speed</th><th>Air temperature</th><th>Swell height</th><tr><td>' + theDate +'</td><td>' + curr.wind.compassDirection + '</td><td>' + curr.wind.speed + ' mph </td><td>' + curr.condition.temperature + ' &#8457</td><td>' + curr.swell.components.primary.height + ' ft</td></tr></table>');
+    var strathmereWeatherConditionsHTML = '<table><th>Last updated as of: </th><th>Wind direction</th><th>Wind speed</th><th>Air temperature</th><th>Swell height</th><tr><td>' + theDate +'</td><td>' + curr.wind.compassDirection + '</td><td>' + curr.wind.speed + ' mph </td><td>' + curr.condition.temperature + ' &#8457</td><td>' + curr.swell.components.primary.height + ' ft</td></tr></table>';	
+   	$weather.append(strathmereWeatherConditionsHTML);
 }
 
 $(document).ready(function() {
+	var baseMSWLink = 'https://magicseaweed.com/api/1d110434ae41701c54d0adec36cf5bb9/forecast/';
+	var strathmereLocationMSWLink = '?spot_id=1281';
+	var usUnitsMSWLink = '&units=us';
+	var fieldsMSWLink = '&fields=localTimestamp,wind.speed,wind.compassDirection,condition.temperature,swell.components.primary.height';
+	var callBackMSWLink = '&callback=checkTime';
+	
+	
 	$.ajax({
 		type: 'GET',
-	    url: "https://magicseaweed.com/api/1d110434ae41701c54d0adec36cf5bb9/forecast/?spot_id=1281&units=us&fields=localTimestamp,wind.speed,wind.compassDirection,condition.temperature,swell.components.primary.height&callback=checkTime",
+	    
+	    url: baseMSWLink + 	strathmereLocationMSWLink + usUnitsMSWLink + fieldsMSWLink + callBackMSWLink,	
+	    //url: "https://magicseaweed.com/api/1d110434ae41701c54d0adec36cf5bb9/forecast/?spot_id=1281&units=us&fields=localTimestamp,wind.speed,wind.compassDirection,condition.temperature,swell.components.primary.height&callback=checkTime",
 
 	    // The name of the callback parameter
 	    jsonp: "xyz",
@@ -81,6 +89,7 @@ $(document).ready(function() {
 	});
 	});
 });
+
 // Remove weather-conditions section on click
 $('#x-box').on('click', function() {
 	$('#weather').animate({
